@@ -32,7 +32,8 @@ app.get('',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render('about',{
         title: 'About Me',
-        name: 'Calven J Rodrigues'
+        name: 'Calven J Rodrigues',
+        message: 'This website is built as a learning project for an Udemy Courses on Node JS by Andrew Mead. This is a weather app that uses the Weatherstack and Mapbox APIs to provide location specific weather. And lastly, thats not me on the bike below!!'
     })
 })
 
