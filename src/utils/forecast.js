@@ -11,7 +11,11 @@ const forecast= (lat,lon,callback) =>{
                 undefined,{
                     temp:body.current.temperature,
                     feelsLike: body.current.feelslike,
-                    wDesc: body.current.weather_descriptions[0]
+                    wDesc: body.current.weather_descriptions[0],
+                    windSpeed: body.current.wind_speed,
+                    wind_dir: body.current.wind_dir,
+                    cloudcover: body.current.cloudcover,
+                    precip: body.current.precip    
                 }
             )
 

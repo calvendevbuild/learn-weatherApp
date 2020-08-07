@@ -56,7 +56,7 @@ app.get('/weather',({query},res)=>{
                 error
             })
         }
-        forecast(lat,lon, (error, {wDesc,temp,feelsLike}={}) => {
+        forecast(lat,lon, (error, {wDesc,temp,feelsLike,windSpeed,wind_dir,cloudcover,precip}={}) => {
             if(error){
                 return res.send({
                     error
@@ -65,7 +65,8 @@ app.get('/weather',({query},res)=>{
             res.send({
                 address: query.address,
                 location: locationName,
-                forecast: 'Looks like '+wDesc+'. The temperature outside is '+temp+' degress but it feels like '+feelsLike
+                forecast: 'Looks like '+wDesc+'. The temperature outside is '+temp+' degress but it feels like '+feelsLike+'. Winds are blowing at '+windSpeed+'kmph from the '+wind_dir+'. The cloud cover is '+cloudcover+'% with a '+precip+'% chance of rain.'
+
             })
 
     })
