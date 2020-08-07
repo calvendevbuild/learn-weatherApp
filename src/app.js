@@ -41,7 +41,7 @@ app.get('/help',(req,res)=>{
     res.render('help',{
         title: 'Help Me!',
         name: 'Calven J Rodrigues',
-        message: 'Even God cant hep those who help themselves.'
+        message: 'Even God cannot help those who help themselves.'
     })
 })
 
